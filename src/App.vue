@@ -12,7 +12,7 @@
         <label for="giftDoor">Gift Door:</label>
         <input type="password" id="giftDoor" v-model.number="giftDoor" size="3" autocomplete="off" />
       </div>
-      <button v-if="!started" @click="start">Start!</button>
+      <button v-if="!started" @click="started = !started">Start!</button>
       <div class="instruction" v-if="started">
         <p>INSTRUCTIONS</p>  
         <p><strong>Participant</strong>: Click on the door of your choice</p>
@@ -50,9 +50,6 @@ export default {
     };
   },
   methods: {
-    start: function() {
-      this.started = true;
-    },
     selectDoor: function(n) {
       this.selectedDoor = n;
     },
