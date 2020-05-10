@@ -57,9 +57,7 @@ export default {
       this.selectedDoor = n;
     },
     reset: function() {
-      this.giftDoor = null;
-      this.selectedDoor = null;
-      this.started = false;
+      Object.assign(this.$data, this.$options.data());
     }
   }
 };
