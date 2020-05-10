@@ -1,6 +1,6 @@
 <template>
   <div class="door-area">
-    <div class="door-frame" :class="{ selected: selected && !open}">
+    <div class="door-frame" :class="{ selected }">
       <Gift v-if="open && hasGift" />
     </div>
     <div class="door" :class="{ open }" @click="(e) => $emit('select', number)">
