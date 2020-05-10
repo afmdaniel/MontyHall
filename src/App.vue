@@ -14,9 +14,13 @@
       </div>
       <button v-if="!started" @click="started = !started">Start!</button>
       <div class="instruction" v-if="started">
-        <p>INSTRUCTIONS</p>  
-        <p><strong>Participant</strong>: Click on the door of your choice</p>
-        <p><strong>Host</strong>: Click on the knob to open doors.</p>
+        <p>INSTRUCTIONS</p>
+        <p>
+          <strong>Participant</strong>: Click on the door of your choice
+        </p>
+        <p>
+          <strong>Host</strong>: Click on the knob to open doors.
+        </p>
       </div>
       <button v-if="started" @click="reset">Reset</button>
     </div>
